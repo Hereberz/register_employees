@@ -9,7 +9,7 @@ using namespace std;
 
 class Developer: public Employee
 {
-protected:
+private:
     string linguagem;
 
 public:
@@ -18,6 +18,8 @@ public:
     Developer( string name, float salary, string date, string linguagem);
     void print();
     void setLanguage(string linguagem);
+
+    string getFormation();
     string getLanguage();
     string type();
 };

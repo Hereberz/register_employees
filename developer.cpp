@@ -7,10 +7,12 @@ using namespace std;
 Developer::Developer()
 {
     string linguagem;
+    
     cout<< "\nInsira a linguagem com que o usuário trabalha: ";
     cin>>linguagem;
     setLanguage(linguagem);
     printf("\nDeveloper::Construtor default executado!\n");
+
     char lixo;
     scanf("%c",&lixo);
 }
@@ -37,9 +39,11 @@ void Developer::setLanguage(string linguagem)             //getters and setters
     this->linguagem = linguagem; 
 }
 
-string Developer::getLanguage()
-{
+string Developer::getLanguage(){
     return linguagem;
+}
+string Developer::getFormation(){
+    return NULL;
 }
 string Developer::type()
 {

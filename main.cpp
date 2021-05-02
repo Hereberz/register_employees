@@ -48,6 +48,31 @@ void printEng(const vector<Employee*> &empo)
     }
 }
 bool minhaFuncao (Employee *emp1, Employee *emp2) {return (emp1->getSalary()<emp2->getSalary());}
+
+void saving(const vector<Employee*> &empo){
+
+    cout<< "Salvando..."<<endl;
+    ofstream myFile;
+    int i=0;
+    myFile.open("exempro.dat");
+    for (auto it=empo.begin(); it != empo.end(); it++)
+    {
+ 
+        myFile<< empo[i]->type() <<endl;
+        myFile<< empo[i]->getName() <<endl;
+        myFile<< empo[i]->getSalary() <<endl;
+        myFile<< empo[i]->getDate() <<endl;
+        
+       if(empo[i]->type()=="dev"){
+            myFile<< empo[i]->getLanguage() <<endl;
+        }
+        else{
+            myFile<< empo[i]->getFormation() <<endl;
+        }
+        i++;
+    }
+    myFile.close();
+}
 int main()
 {
     vector<Employee*> employ;
@@ -70,12 +95,30 @@ int main()
     sort(employ.begin(), employ.end(), minhaFuncao);
     print(employ);
     cout << endl << endl << endl << endl;
+
+    cout<< "Salvando..."<<endl;
+    saving(employ);
+    /*
     ofstream myFile;
-    myFile.open("exempro.txt");
-    for (auto it=employ.begin(); it != employ.end(); it++;)
+    myFile.open("exempro.dat");
+    for (auto it=employ.begin(); it != employ.end(); it++)
     {
+ 
+        myFile<< employ[i]->type() <<endl;
+        myFile<< employ[i]->getName() <<endl;
+        myFile<< employ[i]->getSalary() <<endl;
+        myFile<< employ[i]->getDate() <<endl;
         
+       if(employ[i]->type()=="dev"){
+            myFile<< employ[i]->getLanguage() <<endl;
+        }
+        else{
+            myFile<< employ[i]->getFormation() <<endl;
+        }
+        i++;
     }
+    myFile.close();
+    */
     return 0;
     
 }

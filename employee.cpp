@@ -75,3 +75,11 @@ string Employee::type()
 {
     return NULL;
 }
+
+string Employee::getLanguage(){
+    return NULL;
+}
+
+string Employee::getFormation(){
+    return NULL;
+}

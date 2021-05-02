@@ -32,6 +32,8 @@ public:
     void setDate(string s);
     string getDate() const;
 
+    virtual string getLanguage();
+    virtual string getFormation();
     virtual string type();
 };
 #endif // EMPLOYEE_H

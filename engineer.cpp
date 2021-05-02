@@ -7,10 +7,12 @@ using namespace std;
 Engineer::Engineer()
 {
     string formation;
+
     cout<< "\nInsira a formação do engenheiro: ";
     cin>>formation;
     setFormation(formation);
     printf("\nEngineer::Construtor default executado!\n");
+
     char lixo;
     scanf("%c",&lixo);
 }
@@ -37,10 +39,13 @@ void Engineer::setFormation(string formation)             //getters and setters
     this->formation = formation; 
 }
 
-string Engineer::getFormation()
-{
+string Engineer::getFormation(){
     return formation;
 }
+string Engineer::getLanguage(){
+    return NULL;
+}
+
 string Engineer::type()
 {
     return "eng";

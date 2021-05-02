@@ -1,6 +1,6 @@
 #include "employee.h"
-//#include "engineer.h"
-//#include "developer.h"
+#include "engineer.h"
+#include "developer.h"
 
 #include <vector>
 #include <string>
@@ -8,17 +8,36 @@
 #include <vector>
 
 using namespace std;
-
+void fileSave();
 
 /*
 void fileRead(){
 
 }
-
-void fileSave(){
-
-}
 */
+void fileSave(){
+    cout<< "Salvando..."<<endl;
+    ofstream myFile;
+    myFile.open("exempro.dat");
+    for (auto it=employ.begin(); it != employ.end(); it++)
+    {
+ 
+        myFile<< employ[i]->type() <<endl;
+        myFile<< employ[i]->getName() <<endl;
+        myFile<< employ[i]->getSalary() <<endl;
+        myFile<< employ[i]->getDate() <<endl;
+        
+       if(employ[i]->type()=="dev"){
+            myFile<< employ[i]->getLanguage() <<endl;
+        }
+        else{
+            myFile<< employ[i]->getFormation() <<endl;
+        }
+        i++;
+    }
+    myFile.close();
+}
+
 void addEmployee(){
         Employee p = new;
     }

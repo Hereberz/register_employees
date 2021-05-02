@@ -9,7 +9,7 @@ using namespace std;
 
 class Engineer: public Employee
 {
-protected:
+private:
     string formation;
 
 public:
@@ -19,6 +19,7 @@ public:
     void print();
     void setFormation(string formation);
     string getFormation();
+    string getLanguage();
     string type();
 };
 #endif // ENGINEER_H
