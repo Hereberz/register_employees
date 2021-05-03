@@ -5,11 +5,12 @@ using namespace std;
 
 Employee::Employee()
 {
+    /*
     string name;
     float salary;
     string date;
-    
     cout<< "\nInsira o nome do usuário: ";
+        cin.ignore();
         getline(cin, name);
         setName(name);
     cout<< "Insira o salário do usuário: ";   
@@ -18,6 +19,7 @@ Employee::Employee()
     cout<< "Insira a data de admissão do usuário: ";   
         cin>> date;
         setDate(date);
+    */
     printf("Funcionario::Construtor default executado!\n");
 }
 
@@ -82,4 +84,9 @@ string Employee::getLanguage(){
 
 string Employee::getFormation(){
     return NULL;
+}
+void Employee::setLanguage(string linguagem){
+}
+
+void Employee::setFormation(string formation){
 }

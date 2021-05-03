@@ -6,15 +6,13 @@ using namespace std;
 
 Developer::Developer()
 {
+    /*
     string linguagem;
     
     cout<< "\nInsira a linguagem com que o usuário trabalha: ";
     cin>>linguagem;
-    setLanguage(linguagem);
+    setLanguage(linguagem);*/
     printf("\nDeveloper::Construtor default executado!\n");
-
-    char lixo;
-    scanf("%c",&lixo);
 }
 
 Developer::~Developer()

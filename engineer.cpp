@@ -6,15 +6,14 @@ using namespace std;
 
 Engineer::Engineer()
 {
+    /*
     string formation;
 
     cout<< "\nInsira a formação do engenheiro: ";
     cin>>formation;
     setFormation(formation);
+    */
     printf("\nEngineer::Construtor default executado!\n");
-
-    char lixo;
-    scanf("%c",&lixo);
 }
 
 Engineer::~Engineer()

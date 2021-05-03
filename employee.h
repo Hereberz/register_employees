@@ -32,6 +32,8 @@ public:
     void setDate(string s);
     string getDate() const;
 
+    virtual void setLanguage(string linguagem);
+    virtual void setFormation(string formation);
     virtual string getLanguage();
     virtual string getFormation();
     virtual string type();
